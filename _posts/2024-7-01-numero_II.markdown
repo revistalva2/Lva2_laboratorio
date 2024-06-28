@@ -46,7 +46,7 @@ Primer número de la revista Lva<sup>2</sup> donde abordamos temas tan interesan
 Pulse en el siguiente enlace para descargar revista completa:
 
 <div style="text-align: center;">
-    <a href="https://drive.google.com/uc?export=download&id=1zzRa8MwtNwTd0wKV1Ya6x3MO7GlS5Rfi"
+    <a href="https://drive.google.com/uc?export=download&id=1zzRa8MwtNwTd0wKV1Ya6x3MO7GlS5Rfi">
         <img src="{{site.baseurl}}/images/revista_julio_24.png" alt="Revista completa julio 2024" width="30%">
     </a>
     <p>
