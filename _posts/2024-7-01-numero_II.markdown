@@ -23,7 +23,7 @@ Primer número de la revista Lva<sup>2</sup> donde abordamos temas tan interesan
 
 * [El problema de doblar el cubo](https://drive.google.com/file/d/14w0BzkT-vVgqundUyF4VENjQ3MzjC8gx){:target="_blank"} - [Esteban Martínez Vanó](mailto:emv@ugr.es)
 
-* [El triple resoluble de Kirkman: un problema con historia](https://drive.google.com/file/d/1a3JNlirZha9pbhQXETlaygU-4avWMkyU){:target="_blank"} - [Daniel Martín-Cuder](mailto:daniel.mcudero@urjc.es)
+* [El triple resoluble de Kirkman: un problema con historia](https://drive.google.com/file/d/1a3JNlirZha9pbhQXETlaygU-4avWMkyU){:target="_blank"} - [Daniel Martín-Cudero](mailto:daniel.mcudero@urjc.es)
 
 * [La medida producto de Lebesgue](https://drive.google.com/file/d/11IlBGNglul_I452Q4S3j0AnjCFS9Xp13){:target="_blank"} - [César Rellán Vega](mailto:cesarrellan@gmail.com)
 
