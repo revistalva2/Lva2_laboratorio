@@ -14,7 +14,7 @@ permalink: /volII_num1/
 
 ### Artículos
 
-* [RSA: un sistema criptográfico de clave pública](https://drive.google.com/file/d/1iqV8Wl9HJ02orN0co2xr0B3Piz73EyPx){:target="_blank"} - [Juan Luis Castaño Fernández](mailto:juanlcast@gmail.com))
+* [RSA: un sistema criptográfico de clave pública](https://drive.google.com/file/d/1iqV8Wl9HJ02orN0co2xr0B3Piz73EyPx){:target="_blank"} - [Juan Luis Castaño Fernández](mailto:juanlcast@gmail.com)
 
 * [Rectas isotomizantes](https://drive.google.com/file/d/1Rw6pwousdumY79KO75GxBokmo9phazzR){:target="_blank"} - [Francisco Javier García Capitán](mailto:garciacapitan@gmail.com) y [Antonio Roberto Martínez Fernández](mailto:antoniorobert.martinez@murciaeduca.es)
 
