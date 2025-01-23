@@ -26,7 +26,7 @@ permalink: /volII_num1/
 
 * [Ecuaciones diferenciales como jeroglíficos](https://drive.google.com/file/d/1GiLZDiRxVnWMF3WMZ7cc4mZCWFKtTArE){:target="_blank"} - [José Antonio Langa Rosado](mailto:langa@us.e) y [Grzegorz Łukaszewicz](mailto:glukasz@mimuw.edu.pl)
 
-* [Teorema de caracterización de espacios homogéneos]([https://drive.google.com/file/d/15xcwyzSMr1A7AgTaFMst01eCMdwyCAM6](https://drive.google.com/file/d/149nK5tgznZjwPoA7-TV-zoKtYePxamtE){:target="_blank"} - [Daniel Martín-Cudero](mailto:daniel.mcudero@urjc.es)
+* [Teorema de caracterización de espacios homogéneos](https://drive.google.com/file/d/149nK5tgznZjwPoA7-TV-zoKtYePxamtE){:target="_blank"} - [Daniel Martín-Cudero](mailto:daniel.mcudero@urjc.es)
 
 * [Inteligencia artificial: desde Alan Turing hasta el ChatGPT](https://drive.google.com/file/d/1vCTxvp_dqJ1ZIlxBmWxOefGv0mTonON7){:target="_blank"} - [Manuel de León](mdeleon@icmat.es)
 
