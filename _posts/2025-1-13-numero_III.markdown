@@ -20,7 +20,7 @@ permalink: /volII_num1/
 
 * [Mentiras, malditas mentiras y estadísticas](https://drive.google.com/file/d/1HvplBQiBIMZ7bWbwqQxFTa7uoDLpc0wS){:target="_blank"} - [Miguel Ángel Díaz Quiñones](mailto:midiqui@gmail.com)
 
-* [¿Cuántos politopos regulares hay?](https://drive.google.com/file/d/1Nv095CdzpQL0hBJPke-biEeI2-4W9Qwj){:target="_blank"} - [Paulo González Cudero](mailto:paulo@paulo.gal)
+* [¿Cuántos politopos regulares hay?](https://drive.google.com/file/d/1Nv095CdzpQL0hBJPke-biEeI2-4W9Qwj){:target="_blank"} - [Paulo González Ogando](mailto:paulo@paulo.gal)
 
 * [Explicación de algunas formas geométricas naturales por la Física-Matemática: tréboles en aguas heladas](https://drive.google.com/file/d/1Dg_PdGKQ0jZYvtRceIdkKrrScGwEhqqU){:target="_blank"} - [Jesús Ildefonso Díaz Díaz](mailto:jidiaz@ucm.es)
 
