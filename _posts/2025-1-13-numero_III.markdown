@@ -34,7 +34,7 @@ permalink: /volII_num1/
 
 ***
 
-Pulse en el siguiente enlace para descargar revista completa:
+Pulse en el siguiente enlace para descargar la revista completa:
 
 <div style="text-align: center;">
     <a href="https://drive.google.com/file/d/1XGoWkRCp0GZFp8LjrTK5nIy86_7aiykl">
