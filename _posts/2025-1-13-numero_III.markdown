@@ -2,7 +2,7 @@
 layout: post
 title:  Volumen II, Número 1
 date:   2025-01-13 03:05:55 +0300
-image:  logo_II.jpg
+image:  logo_III.jpg
 permalink: /volII_num1/
 ---
 
