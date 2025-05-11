@@ -21,9 +21,9 @@ El evento concluyó con muestras de agradecimiento y encuentros presenciales —
 
 Desde Lva2 agradecemos sinceramente a las entidades organizadoras y a todos los asistentes por brindarnos la oportunidad de compartir nuestro proyecto, y por el cálido recibimiento y apoyo recibido durante la jornada.
 
-<img src="{{site.baseurl}}/images/noticia2_1.png" alt="Imagen local" style="display: block; margin: auto;">
+<img src="{{site.baseurl}}/images/noticia2_1.jpg" alt="Imagen local" style="display: block; margin: auto;">
 
-<img src="{{site.baseurl}}/images/noticia2_2.png" alt="Imagen local" style="display: block; margin: auto;">
+<img src="{{site.baseurl}}/images/noticia2_2.jpg" alt="Imagen local" style="display: block; margin: auto;">
 
 <div style="margin: 40px 0;">
   <hr style="border: 1px solid #ccc;">
