@@ -4,6 +4,32 @@ title: Noticias
 permalink: /noticias/
 ---
 
+<div style="margin: 40px 0;">
+  <hr style="border: 1px solid #ccc;">
+</div>
+
+
+##  Lva<sup>2</sup> se presenta en la octava edición de «Libros, mates y mucho más»
+
+El pasado 7 de mayo, la revista «Lva2» o «Elevados» fue presentada en el marco de la octava edición del evento “Libros, mates y mucho más”, organizado conjuntamente por la Real Sociedad Matemática Española (RSME) y la Universidad de Nebrija.
+
+Durante la jornada, nuestro director, José Manuel Sánchez Muñoz, tuvo la oportunidad de dar a conocer este proyecto editorial que nace en el seno del grupo de Telegram “Retos Matemáticos”, y que desde sus inicios ha buscado combinar creatividad, divulgación y rigor matemático.
+
+La presentación despertó un notable interés entre los asistentes, quienes participaron activamente con preguntas, comentarios y felicitaciones. Varias de las intervenciones destacaron la calidad del producto final de la revista, especialmente al conocer el tamaño reducido del equipo humano que lo hace posible.
+
+El evento concluyó con muestras de agradecimiento y encuentros presenciales —por primera vez— entre varios miembros del grupo de Retos Matemáticos, reforzando los lazos que dan vida a esta comunidad.
+
+Desde Lva2 agradecemos sinceramente a las entidades organizadoras y a todos los asistentes por brindarnos la oportunidad de compartir nuestro proyecto, y por el cálido recibimiento y apoyo recibido durante la jornada.
+
+<img src="{{site.baseurl}}/images/noticia2_1.png" alt="Imagen local" style="display: block; margin: auto;">
+
+<img src="{{site.baseurl}}/images/noticia2_2.png" alt="Imagen local" style="display: block; margin: auto;">
+
+<div style="margin: 40px 0;">
+  <hr style="border: 1px solid #ccc;">
+</div>
+
+
 ##  Revista Lva<sup>2</sup>, premiada por «Ciencia en Acción»
 
 La revista de divulgación matemática «Lva2» o «Elevados», dirigida por el docente y Jefe del Departamento de Matemáticas del IES Sor Juana de la Cruz (Cubas de la Sagra, Madrid) José Manuel Sánchez Muñoz, obtiene el primer premio de la XXV Edición del Certamen «Ciencia en Acción».
