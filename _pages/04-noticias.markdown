@@ -13,7 +13,7 @@ permalink: /noticias/
 
 El pasado 7 de mayo, la revista «Lva2» o «Elevados» fue presentada en el marco de la octava edición del evento «Libros, mates y mucho más», organizado conjuntamente por la Real Sociedad Matemática Española (RSME) y la Universidad de Nebrija.
 
-Durante la jornada, nuestro director, José Manuel Sánchez Muñoz, tuvo la oportunidad de dar a conocer este proyecto editorial que nace en el seno del grupo de Telegram “Retos Matemáticos”, y que desde sus inicios ha buscado combinar creatividad, divulgación y rigor matemático.
+Durante la jornada, nuestro director, José Manuel Sánchez Muñoz, tuvo la oportunidad de dar a conocer este proyecto editorial que nace en el seno del grupo de Telegram «Retos Matemáticos», y que desde sus inicios ha buscado combinar creatividad, divulgación y rigor matemático.
 
 La presentación despertó un notable interés entre los asistentes, quienes participaron activamente con preguntas, comentarios y felicitaciones. Varias de las intervenciones destacaron la calidad del producto final de la revista, especialmente al conocer el tamaño reducido del equipo humano que lo hace posible.
 
