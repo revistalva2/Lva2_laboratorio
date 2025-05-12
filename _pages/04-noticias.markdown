@@ -31,11 +31,12 @@ En el siguiente enlace puede visualizarse la grabación del evento:
 
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 30px 0;">
-  <iframe src="https://player.vimeo.com/video/943297471?h=3e30cf5ce0" 
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-          frameborder="0" 
-          allow="autoplay; fullscreen; picture-in-picture" 
-          allowfullscreen>
+  <iframe 
+    src="https://www.youtube.com/embed/uXaWO-HBghQ?start=857&end=2470&rel=0&modestbranding=1" 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
   </iframe>
 </div>
 
