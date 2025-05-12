@@ -26,6 +26,20 @@ Desde «Lva2» agradecemos sinceramente a las entidades organizadoras y a todos 
   <img src="{{site.baseurl}}/images/noticia2_2.jpg" alt="Imagen 2" style="width: 45%; border-radius: 8px;">
 </div>
 
+
+En el siguiente enlace puede visualizarse la grabación del evento:
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 30px 0;">
+  <iframe src="https://player.vimeo.com/video/943297471?h=3e30cf5ce0" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+          frameborder="0" 
+          allow="autoplay; fullscreen; picture-in-picture" 
+          allowfullscreen>
+  </iframe>
+</div>
+
+
 <div style="margin: 40px 0;">
   <hr style="border: 1px solid #ccc;">
 </div>
