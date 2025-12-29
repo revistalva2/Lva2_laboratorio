@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Volumen II, Número 1
-date:   2025-01-01 03:05:55 +0300
+title:  Volumen IV, Número 1
+date:   2026-01-01 03:05:55 +0300
 image:  logo_IV.jpg
 permalink: /volIII_num1/
 ---
