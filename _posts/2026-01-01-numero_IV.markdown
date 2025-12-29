@@ -3,7 +3,7 @@ layout: post
 title:  Volumen IV, Número 1
 date:   2026-01-01 03:05:55 +0300
 image:  logo_IV.jpg
-permalink: /volIII_num1/
+permalink: /volIV_num1/
 ---
 
 # Volumen IV, Número 1 - Enero 2026
