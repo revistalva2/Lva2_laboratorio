@@ -10,27 +10,31 @@ permalink: /volIII_num1/
 
 ### Créditos
 
-* [Portada, Créditos, Índice y Editorial](https://drive.google.com/file/d/1GT-HceB15Vcfk-szjFrbhdkDi5g9oDib){:target="_blank"}
+* [Portada, Créditos, Índice y Editorial](https://drive.google.com/file/d/1Ef5dIpz_q-9R8gTR-p-SoXRpQRRZOMQP){:target="_blank"}
 
 ### Artículos
 
-* [RSA: un sistema criptográfico de clave pública](https://drive.google.com/file/d/1KChWt5JsEjV_DVSMR2sHnWFhqz6aYecw){:target="_blank"} - [Juan Luis Castaño Fernández](mailto:juanlcast@gmail.com)
+* [En la cresta de la ondícula](https://drive.google.com/file/d/1ybO9CKSF4LYlq5tJV---OZfYgoAGUGjk){:target="_blank"} - [Sinuhé Perea Puente](mailto:sinuhe.perea@mpikg.mpg.de) y [Yanxue Wang]{mailto:y.wang@fz-juelich.de}
 
-* [Rectas isotomizantes](https://drive.google.com/file/d/1h7OmaIy5XoCGngoh2_y2paF2wbQh5j47){:target="_blank"} - [Francisco Javier García Capitán](mailto:garciacapitan@gmail.com) y [Antonio Roberto Martínez Fernández](mailto:antoniorobert.martinez@murciaeduca.es)
+* [Fechas pitagóricas en el siglo XXI](https://drive.google.com/file/d/1SGksCpAIEpVsLPN8to0JyKloAA8RHaSy){:target="_blank"} - [Manuel Muñoz Blázquez](mailto:mmunnozb04@educarex.es) y [Miguel Ángel Pérez García-Ortega](mailto:mianpgo@gmail.com)
 
-* [Mentiras, malditas mentiras y estadísticas](https://drive.google.com/file/d/1HvplBQiBIMZ7bWbwqQxFTa7uoDLpc0wS){:target="_blank"} - [Miguel Ángel Díaz Quiñones](mailto:midiqui@gmail.com)
+* [Una conjetura cuántica](https://drive.google.com/file/d/13S9QtrEH849nQx2JOkjt0IhyNzIlSYeB){:target="_blank"} - [Ramon Rebull Camarasa](mailto:ramonrebull@hotmail.com)
 
-* [¿Cuántos politopos regulares hay?](https://drive.google.com/file/d/1Nv095CdzpQL0hBJPke-biEeI2-4W9Qwj){:target="_blank"} - [Paulo González Ogando](mailto:paulo@paulo.gal)
+* [V - A = C + 2: un recorrido por la fórmula de Euler](https://drive.google.com/file/d/1IE-uZDZ1l_vciYrmY8BosN4P65ltdm1a){:target="_blank"} - [Paulo González Ogando](mailto:paulo@paulo.gal)
 
-* [Explicación de algunas formas geométricas naturales por la Física-Matemática: tréboles en aguas heladas](https://drive.google.com/file/d/1Dg_PdGKQ0jZYvtRceIdkKrrScGwEhqqU){:target="_blank"} - [Jesús Ildefonso Díaz Díaz](mailto:jidiaz@ucm.es)
+* [Patrones de Turing que dan forma al mundo vivo](https://drive.google.com/file/d/1ivVi3jJQcI0wzJ4tVWxBnv40RRpGL-K2){:target="_blank"} - [Pilar Guerrero Contreras](mailto:pilar.guerrero@uc3m.es)
 
-* [Ecuaciones diferenciales como jeroglíficos](https://drive.google.com/file/d/1GiLZDiRxVnWMF3WMZ7cc4mZCWFKtTArE){:target="_blank"} - [José Antonio Langa Rosado](mailto:langa@us.e) y [Grzegorz Łukaszewicz](mailto:glukasz@mimuw.edu.pl)
+* [Las matemáticas del rompecabezas de Sol LeWitt](https://drive.google.com/file/d/10aUxEhNTFyWx9GfW9eMB8EhezH9KgRc8){:target="_blank"} - [Raúl Ibáñez Torres](mailto:raul.ibanez@ehu.eus)
 
-* [Teorema de caracterización de espacios homogéneos](https://drive.google.com/file/d/149nK5tgznZjwPoA7-TV-zoKtYePxamtE){:target="_blank"} - [Daniel Martín-Cudero](mailto:daniel.mcudero@urjc.es)
+* [Denjoy y sus puntos de continuidad aproximativa](https://drive.google.com/file/d/12gDT5-DV3RnY8cJ__NcrvrIFMlC--WMo){:target="_blank"} - [Éric Dubon](mailto:eric.dubon@ua.es) y [Ángel San Antolín Gil](mailto:angel.sanantolin@ua.es)
 
-* [Inteligencia artificial: desde Alan Turing hasta el ChatGPT](https://drive.google.com/file/d/1vCTxvp_dqJ1ZIlxBmWxOefGv0mTonON7){:target="_blank"} - [Manuel de León](mdeleon@icmat.es)
+* [El legado de María Andresa Casmayor de la Coma: alfabetización matemática y educomunicación](https://drive.google.com/file/d/1bAUIyiamFOl2fOo788I5lwNPoFbc-EpO){:target="_blank"} - [Pilar Laguna Lozano](mailto:plaguna@unizar.es), [Begoña Pérez-Calle](mailto:bperez@unizar.es) y [Raquel Villacampa Gutiérrez](mailto:raquelvg@unizar.es)
+  
+* [Singularidades en 3D: el desafío matemático de Euler y Navier-Stokes](https://drive.google.com/file/d/1PBHGfjIB2t6eVI_JrniJF_wGIxJx_6TG){:target="_blank"} - [Diego Córdoba Gazolaz](mailto:dcg@icmat.es) y [Luis Martínez Zoroa](mailto:luis.martinezzoroa@cunef.edu)
 
-### [Problemas](https://drive.google.com/file/d/1vJeJiDseLtn4C4EtJQryZCXYzQBj4gla){:target="_blank"}
+* [Inversión esférica de nudos: el nudo trébol y el nudo ocho](https://drive.google.com/file/d/1JJ8potK3lMAifG6tNnHJO5Nn38EkjJx9){:target="_blank"} - [Juan Carlos Ponce Campuzano](mailto:j.poncecampuzano@griffith.edu.au), [Ivana Carrizo Molina](mailto:n.carrizomolina@uq.edu.au) y [Miguel Ángel Maldonado Aguilar](mailto:mmaldonado@uaz.edu.mx)
+
+### [Problemas](https://drive.google.com/file/d/1lSrnaKUVHEBobYAF-JC-tPAHDp1ef6yt){:target="_blank"}
 
 ***
 
@@ -38,7 +42,7 @@ Pulse en el siguiente enlace para descargar la revista completa:
 
 <div style="text-align: center;">
     <a href="https://drive.google.com/file/d/1XGoWkRCp0GZFp8LjrTK5nIy86_7aiykl">
-        <img src="{{site.baseurl}}/images/revista_enero_25.jpg" alt="Revista completa enero 2025" width="30%">
+        <img src="{{site.baseurl}}/images/revista_enero_25.jpg" alt="Revista completa enero 2026" width="30%">
     </a>
     <p>
         <a href="https://drive.google.com/file/d/1XGoWkRCp0GZFp8LjrTK5nIy86_7aiykl">Revista completa</a>
