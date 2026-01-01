@@ -14,8 +14,8 @@ permalink: /volIII_num1/
 
 ### Artículos
 
-* [En la cresta de la ondícula](https://drive.google.com/file/d/1ybO9CKSF4LYlq5tJV---OZfYgoAGUGjk){:target="_blank"} - [Sinuhé Perea Puente](mailto:sinuhe.perea@mpikg.mpg.de) y [Yanxue Wang]{mailto:y.wang@fz-juelich.de}
-
+* [En la cresta de la ondícula](https://drive.google.com/file/d/1ybO9CKSF4LYlq5tJV---OZfYgoAGUGjk){:target="_blank"} - [Sinuhé Perea Puente](mailto:sinuhe.perea@mpikg.mpg.de) y [Yanxue Wang](mailto:y.wang@fz-juelich.de)
+  
 * [Fechas pitagóricas en el siglo XXI](https://drive.google.com/file/d/1SGksCpAIEpVsLPN8to0JyKloAA8RHaSy){:target="_blank"} - [Manuel Muñoz Blázquez](mailto:mmunnozb04@educarex.es) y [Miguel Ángel Pérez García-Ortega](mailto:mianpgo@gmail.com)
 
 * [Una conjetura cuántica](https://drive.google.com/file/d/13S9QtrEH849nQx2JOkjt0IhyNzIlSYeB){:target="_blank"} - [Ramon Rebull Camarasa](mailto:ramonrebull@hotmail.com)
