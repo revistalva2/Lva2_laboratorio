@@ -18,7 +18,7 @@ permalink: /volV_num1/
   
 * [El problema de la elección de pareja](https://xxxxxxxx){:target="_blank"} - [Vicente Muñoz Velázquez](mailto:vicente.munoz@ucm.es)
 
-* [Una integral de <<ensueño>>](https://xxxxxxxx){:target="_blank"} - [José Manuel Sánchez Muñoz](mailto:jmanuel.sanchez@gmx.es) y [Pablo Vitoria García](mailto:pvitoria@gmail.com)
+* [Una integral de &laquo;ensueño&raquo;](https://xxxxxxxx){:target="_blank"} - [José Manuel Sánchez Muñoz](mailto:jmanuel.sanchez@gmx.es) y [Pablo Vitoria García](mailto:pvitoria@gmail.com)
 
 * [De un problema de olimpiadas al teorema de Wedderburn](https://xxxxxxxx){:target="_blank"} - [Henry Díaz Bordón](mailto:henrydiazbordon@gmail.com)
 
