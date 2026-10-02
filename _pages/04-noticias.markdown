@@ -150,7 +150,7 @@ Y nosotros tuvimos la enorme fortuna de que ambos decidieran contarla también d
  
 Por eso, más que nunca, podemos decirlo con orgullo: 
  
-Gracias, Diego. Gracias, Luis. 
+Gracias, <b>Diego</b>. Gracias, <b>Luis</b>. 
  
 Y gracias por permitir que una humilde revista de divulgación matemática como Lva<sup>2</sup> pudiera estar, aunque fuese desde una pequeña esquina, en las páginas de una historia que ahora está dando la vuelta al mundo. 
 
