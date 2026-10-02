@@ -16,7 +16,9 @@ Hay momentos en la vida de una publicación en los que uno mira hacia atrás y c
  
 Para quienes hacemos Lva<sup>2</sup>, uno de esos momentos es hoy. 
  
-En enero de 2026 publicábamos en nuestro tercer volumen el artículo «Singularidades en 3D: el desafío matemático de Euler y Navier-Stokes», firmado por dos matemáticos españoles cuyo trabajo venía siguiendo desde hacía años la frontera de uno de los grandes problemas abiertos de la matemática contemporánea: Diego Córdoba Gazolaz y Luis Martínez-Zoroa. El artículo, que ocupa las páginas 95–108 de aquel número, explicaba para nuestros lectores la naturaleza de las singularidades en las ecuaciones de Euler y Navier–Stokes y repasaba algunos de los mecanismos que podían conducir a una pérdida de regularidad en tiempo finito. 
+En enero de 2026 publicábamos en nuestro tercer volumen el artículo <a href="https://drive.google.com/file/d/1PBHGfjIB2t6eVI_JrniJF_wGIxJx_6TG/edit" target="_blank" rel="noopener noreferrer">
+  «Singularidades en 3D: el desafío matemático de Euler y Navier-Stokes»
+</a>, firmado por dos matemáticos españoles cuyo trabajo venía siguiendo desde hacía años la frontera de uno de los grandes problemas abiertos de la matemática contemporánea: Diego Córdoba Gazolaz y Luis Martínez-Zoroa. El artículo, que ocupa las páginas 95–108 de aquel número, explicaba para nuestros lectores la naturaleza de las singularidades en las ecuaciones de Euler y Navier–Stokes y repasaba algunos de los mecanismos que podían conducir a una pérdida de regularidad en tiempo finito. 
  
 Lo que entonces era para nosotros, sobre todo, un motivo de orgullo editorial, ha adquirido durante las últimas semanas una dimensión que difícilmente podíamos imaginar. 
 
@@ -32,9 +34,9 @@ Pero, para nosotros, había un detalle especialmente significativo: en el coraz�
  
 La razón no es casual. 
  
-En 2023, ambos habían desarrollado junto con Fan Zheng nuevos mecanismos para la formación de singularidades en las ecuaciones tridimensionales de Euler. Su trabajo introducía una estrategia basada en regiones con vorticidad separadas por regiones libres de ella, alejándose de los mecanismos autosimilares tradicionales. El resultado fue publicado posteriormente en Annals of PDE. 
+En 2023, ambos habían desarrollado junto con Fan Zheng nuevos mecanismos para la formación de singularidades en las ecuaciones tridimensionales de Euler. Su trabajo introducía una estrategia basada en regiones con vorticidad separadas por regiones libres de ella, alejándose de los mecanismos autosimilares tradicionales. El resultado fue publicado posteriormente en <em>Annals of PDE</em>. 
 
-Ese programa de investigación no quedó ahí. Córdoba y Martínez-Zoroa continuaron desarrollando mecanismos de blow-up en ecuaciones relacionadas, incluyendo trabajos sobre Euler con fuerza externa y, posteriormente, sobre ecuaciones de Navier–Stokes hipodisipativas. En 2026, un artículo firmado por Córdoba, Martínez-Zoroa y Fan Zheng estableció la formación de singularidades en una clase de ecuaciones de Navier–Stokes con disipación fraccionaria. 
+Ese programa de investigación no quedó ahí. Córdoba y Martínez-Zoroa continuaron desarrollando mecanismos de <em>blow-up</em> en ecuaciones relacionadas, incluyendo trabajos sobre Euler con fuerza externa y, posteriormente, sobre ecuaciones de Navier–Stokes hipodisipativas. En 2026, un artículo firmado por Córdoba, Martínez-Zoroa y Fan Zheng estableció la formación de singularidades en una clase de ecuaciones de Navier–Stokes con disipación fraccionaria. 
  
 Es precisamente esta línea de investigación la que ha adquirido ahora una repercusión extraordinaria. 
 
@@ -62,7 +64,7 @@ El artículo explicaba que la pregunta fundamental no era simplemente encontrar 
  
 Hoy, nueve meses después, esa cuestión se encuentra en el centro de una auténtica revolución científica. 
  
-El Clay Mathematics Institute, que administra los Problemas del Milenio, ha reconocido la magnitud del momento y ha señalado que el problema de Navier–Stokes parece haber sido resuelto, aunque ha recordado que el proceso de evaluación de una solución y de atribución del premio está deliberadamente diseñado para desarrollarse con calma. 
+El <em>Clay Mathematics Institute</em>, que administra los Problemas del Milenio, ha reconocido la magnitud del momento y ha señalado que el problema de Navier–Stokes parece haber sido resuelto, aunque ha recordado que el proceso de evaluación de una solución y de atribución del premio está deliberadamente diseñado para desarrollarse con calma. 
  
 Es una cautela absolutamente necesaria en matemáticas: una afirmación extraordinaria necesita una demostración extraordinaria, y una demostración de esta naturaleza debe ser examinada por la comunidad matemática. 
  
@@ -90,11 +92,11 @@ La IA está entrando en un territorio que los matemáticos llevan décadas const
 
 El trabajo conjunto de Diego Córdoba y Luis Martínez-Zoroa se sitúa precisamente en el estudio de la formación de singularidades en fluidos incomprensibles. 
  
-Córdoba, investigador del Instituto de Ciencias Matemáticas, ha desarrollado durante años una destacada trayectoria en el estudio matemático de la mecánica de fluidos. Martínez-Zoroa, discípulo doctoral de Córdoba y actualmente Assistant Professor en CUNEF Universidad, centra su investigación en dinámica de fluidos y formación de singularidades. 
+Córdoba, investigador del Instituto de Ciencias Matemáticas, ha desarrollado durante años una destacada trayectoria en el estudio matemático de la mecánica de fluidos. Martínez-Zoroa, discípulo doctoral de Córdoba y actualmente <em>Assistant Professor</em> en CUNEF Universidad, centra su investigación en dinámica de fluidos y formación de singularidades. 
  
 La importancia de sus investigaciones no se reduce, por tanto, a una única publicación. 
  
-Existe una auténtica línea de investigación que conecta sus trabajos de 2023 sobre Euler, sus resultados posteriores sobre mecanismos de blow-up, las investigaciones sobre Boussinesq y Navier–Stokes hipodisipativas y los avances que han desembocado en el extraordinario episodio de septiembre de 2026. 
+Existe una auténtica línea de investigación que conecta sus trabajos de 2023 sobre Euler, sus resultados posteriores sobre mecanismos de <em>blow-up</em>, las investigaciones sobre Boussinesq y Navier–Stokes hipodisipativas y los avances que han desembocado en el extraordinario episodio de septiembre de 2026. 
  
 Y resulta emocionante pensar que, en enero, nuestros lectores pudieron conocer directamente de sus autores algunos de los conceptos que hoy aparecen en las noticias científicas de todo el planeta. 
 
@@ -122,7 +124,7 @@ La Medalla Fields no es un premio que pueda solicitarse de manera convencional n
  
 Martínez-Zoroa nació en enero de 1994 y obtuvo su doctorado en Matemáticas en 2023. 
  
-Desde Lva2, queremos expresar públicamente una aspiración que nace del orgullo y de la admiración: ojalá el extraordinario reconocimiento internacional de su trabajo contribuya a que su nombre sea tenido en cuenta entre los grandes jóvenes matemáticos de su generación. 
+Desde Lva<sup>2</sup>, queremos expresar públicamente una aspiración que nace del orgullo y de la admiración: ojalá el extraordinario reconocimiento internacional de su trabajo contribuya a que su nombre sea tenido en cuenta entre los grandes jóvenes matemáticos de su generación. 
  
 No nos corresponde a nosotros decidir quién debe recibir una Medalla Fields. Eso corresponde a la comunidad matemática internacional y, en última instancia, a los órganos competentes del premio. 
  
@@ -140,7 +142,7 @@ En enero escribíamos sobre un problema que llevaba décadas desafiando a las me
  
 Hoy, ese mismo problema ocupa titulares internacionales y ha puesto de manifiesto una combinación que hace apenas unos años habría parecido propia de la ciencia ficción: matemáticos de primer nivel, nuevas ideas sobre singularidades y sistemas de inteligencia artificial capaces de explorar demostraciones matemáticas a una escala inédita. 
  
-El desenlace definitivo todavía tendrá que pasar por el escrutinio de la comunidad matemática. El propio Clay Mathematics Institute ha dejado claro que el proceso de evaluación debe seguir su curso. 
+El desenlace definitivo todavía tendrá que pasar por el escrutinio de la comunidad matemática. El propio <em>Clay Mathematics Institute</em> ha dejado claro que el proceso de evaluación debe seguir su curso. 
  
 Pero hay algo que ya nadie puede discutir: los trabajos de Diego Córdoba y Luis Martínez-Zoroa forman parte de esta historia. 
  
@@ -150,7 +152,7 @@ Por eso, más que nunca, podemos decirlo con orgullo:
  
 Gracias, Diego. Gracias, Luis. 
  
-Y gracias por permitir que una humilde revista de divulgación matemática como Lva2 pudiera estar, aunque fuese desde una pequeña esquina, en las páginas de una historia que ahora está dando la vuelta al mundo. 
+Y gracias por permitir que una humilde revista de divulgación matemática como Lva<sup>2</sup> pudiera estar, aunque fuese desde una pequeña esquina, en las páginas de una historia que ahora está dando la vuelta al mundo. 
 
 
 
