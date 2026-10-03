@@ -105,7 +105,7 @@ Y resulta emocionante pensar que, en enero, nuestros lectores pudieron conocer d
   Una traducción al inglés que llega en el momento adecuado 
 </h3>
 
-Por todo ello, en coordinación con los autores, hemos decidido dar un paso que para Lva<sup>2</sup> tiene un significado especial: <b>preparar una versión inglesa de nuestro artículo</b> (puede verse <a href="https://drive.google.com/file/d/15lMrX2cNtyzvIcYME15D05xQbLdyUjBA" target="_blank">aquí</a>). 
+Por todo ello, en coordinación con los autores, hemos decidido dar un paso que para Lva<sup>2</sup> tiene un significado especial: <b>preparar una versión inglesa de nuestro artículo</b> (puede leerse <a href="https://drive.google.com/file/d/15lMrX2cNtyzvIcYME15D05xQbLdyUjBA" target="_blank">aquí</a>). 
  
 No pretendemos competir con las publicaciones de investigación ni convertir una pieza de divulgación en algo que no es. 
  
