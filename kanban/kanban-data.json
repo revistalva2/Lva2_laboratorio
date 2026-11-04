@@ -1,19 +1,37 @@
 {
-  "columns": [
-    { "id": "sin_asignar", "title": "Sin Asignar" },
-    { "id": "asignado", "title": "Asignado a Revisor" },
-    { "id": "revisado", "title": "Revisado" },
-    { "id": "devuelto", "title": "Devuelto a Autor" },
-    { "id": "finalizado", "title": "Finalizado" }
-  ],
   "cards": [
     {
-      "id": "art_1",
+      "autor": "Manuel Gómez Zotero",
       "column": "sin_asignar",
-      "titulo": "El misterio del asesinato del profesor de matemáticas",
-      "autor": "Agatha Christie",
+      "hashtags": [
+        "#vol4n1",
+        "#teoria_numeros"
+      ],
+      "id": "art_1",
       "revisor": "",
-      "hashtags": ["#vol4n1", "#matematicas"]
+      "titulo": "Zipf, cachés y función zeta"
+    }
+  ],
+  "columns": [
+    {
+      "id": "sin_asignar",
+      "title": "Sin Asignar"
+    },
+    {
+      "id": "asignado",
+      "title": "Asignado a Revisor"
+    },
+    {
+      "id": "revisado",
+      "title": "Revisado"
+    },
+    {
+      "id": "devuelto",
+      "title": "Devuelto a Autor"
+    },
+    {
+      "id": "finalizado",
+      "title": "Finalizado"
     }
   ]
 }
