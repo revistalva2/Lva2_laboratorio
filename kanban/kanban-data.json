@@ -61,7 +61,7 @@
       "titulo": "Cacharreando con Medias"
     }
   ],
-"columns": [
+  "columns": [
     {
       "id": "sin_asignar",
       "title": "Sin Asignar"
@@ -87,3 +87,4 @@
       "title": "Aceptado (fin de proceso)"
     }
   ]
+}
