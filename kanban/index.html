@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <title>Kanban Editorial - Lva2</title>
-    <!-- Tailwind CSS para diseño moderno -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- SortableJS para Drag & Drop fluido -->
+    <!-- SortableJS para Drag & Drop -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
     <style>
         .bubble-card {
@@ -34,13 +34,10 @@
             <h1 class="text-xl font-bold text-slate-900 flex items-center gap-2">
                 <span>📊</span> Tablero Editorial - Lva2
             </h1>
-            <p class="text-xs text-slate-500">Gestión colaborativa de artículos (Servidor GitHub)</p>
+            <p class="text-xs text-slate-500">Gestión colaborativa de artículos (Servidor Automatizado)</p>
         </div>
 
         <div class="flex items-center gap-3 flex-wrap">
-            <button onclick="abrirModalConfig()" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-2 rounded-lg font-medium transition flex items-center gap-1">
-                ⚙️ Configurar GitHub
-            </button>
             <button onclick="nuevaTarjeta()" class="text-xs bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition flex items-center gap-1 shadow-sm">
                 ➕ Nuevo Artículo
             </button>
@@ -61,37 +58,9 @@
     <!-- CONTENEDOR DEL TABLERO KANBAN -->
     <main class="flex-1 p-6 overflow-x-auto">
         <div id="kanban-board" class="flex gap-6 items-start min-h-[75vh]">
-            <!-- Las columnas se generan dinámicamente aquí -->
+            <!-- Las columnas se generan dinámicamente -->
         </div>
     </main>
-
-    <!-- MODAL DE CONFIGURACIÓN DE GITHUB -->
-    <div id="modal-config" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center p-4 z-50">
-        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl">
-            <h3 class="text-lg font-bold mb-2">Configuración de Conexión GitHub</h3>
-            <p class="text-xs text-slate-500 mb-4">Introduce los datos de tu repositorio para permitir que la web guarde los cambios directamente haciendo commits automáticos.</p>
-            
-            <div class="space-y-3 text-sm">
-                <div>
-                    <label class="block text-xs font-semibold text-slate-700 mb-1">Repositorio (ej: revistalva2/Lva2_laboratorio)</label>
-                    <input type="text" id="cfg-repo" class="w-full border rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-indigo-500 outline-none" placeholder="revistalva2/Lva2_laboratorio">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-slate-700 mb-1">Ruta del JSON (ej: kanban/kanban-data.json)</label>
-                    <input type="text" id="cfg-path" class="w-full border rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-indigo-500 outline-none" value="kanban/kanban-data.json">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-slate-700 mb-1">Personal Access Token (PAT con permisos de repo)</label>
-                    <input type="password" id="cfg-token" class="w-full border rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-indigo-500 outline-none" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
-                </div>
-            </div>
-
-            <div class="mt-6 flex justify-end gap-2">
-                <button onclick="cerrarModalConfig()" class="px-4 py-2 text-xs bg-slate-100 hover:bg-slate-200 rounded-lg font-medium">Cancelar</button>
-                <button onclick="guardarConfig()" class="px-4 py-2 text-xs bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium">Guardar Configuración</button>
-            </div>
-        </div>
-    </div>
 
     <!-- MODAL DE EDICIÓN DE ARTÍCULO -->
     <div id="modal-card" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center p-4 z-50">
@@ -132,7 +101,13 @@
 
     <!-- SCRIPT DE LÓGICA -->
     <script>
-        // Estructura por defecto del tablero si no carga el JSON
+        // =========================================================
+        // CONFIGURACIÓN DIRECTA DEL SERVIDOR
+        // =========================================================
+        const REPO_NAME = "revistalva2/Lva2_laboratorio";
+        const GITHUB_PAT = "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"; // Pega aquí tu Personal Access Token (con permisos repo y workflow)
+        // =========================================================
+
         let boardData = {
             columns: [
                 { id: "sin_asignar", title: "Sin Asignar" },
@@ -146,15 +121,6 @@
 
         let currentFilter = 'TODOS';
 
-        // Cargar configuración de GitHub guardada en navegador (solo credenciales de acceso)
-        function getConfig() {
-            return {
-                repo: localStorage.getItem('kanban_repo') || 'revistalva2/Lva2_laboratorio',
-                path: localStorage.getItem('kanban_path') || 'kanban/kanban-data.json',
-                token: localStorage.getItem('kanban_token') || ''
-            };
-        }
-
         async function cargarTableroDesdeServidor() {
             try {
                 const response = await fetch('./kanban-data.json?t=' + new Date().getTime());
@@ -163,11 +129,10 @@
                     renderKanban();
                     renderHashtagFilters();
                 } else {
-                    console.warn("No se encontró kanban-data.json local, usando estructura vacía.");
                     renderKanban();
                 }
             } catch (error) {
-                console.error("Error al cargar el tablero del servidor:", error);
+                console.error("Error al cargar el tablero:", error);
                 renderKanban();
             }
         }
@@ -184,22 +149,17 @@
                         <h3 class="font-bold text-xs uppercase tracking-wider text-slate-600">${col.title}</h3>
                         <span class="bg-slate-300 text-slate-700 text-xs px-2 py-0.5 rounded-full font-semibold" id="count-${col.id}">0</span>
                     </div>
-                    <div class="flex-1 overflow-y-auto space-y-3 p-1 kanban-items" data-column-id="${col.id}" id="col-${col.id}">
-                        <!-- Tarjetas -->
-                    </div>
+                    <div class="flex-1 overflow-y-auto space-y-3 p-1 kanban-items" data-column-id="${col.id}" id="col-${col.id}"></div>
                 `;
                 container.appendChild(colDiv);
 
-                // Filtrar tarjetas de esta columna
                 const cardsContainer = colDiv.querySelector(`#col-${col.id}`);
                 const colCards = boardData.cards.filter(card => card.column === col.id);
                 
                 document.getElementById(`count-${col.id}`).innerText = colCards.length;
 
                 colCards.forEach(card => {
-                    if (currentFilter !== 'TODOS' && !card.hashtags.includes(currentFilter)) {
-                        return; // Ocultar si no coincide con el filtro
-                    }
+                    if (currentFilter !== 'TODOS' && !card.hashtags.includes(currentFilter)) return;
 
                     const cardEl = document.createElement('div');
                     cardEl.className = 'bubble-card p-4 rounded-xl cursor-pointer border border-slate-100';
@@ -219,7 +179,6 @@
                     cardsContainer.appendChild(cardEl);
                 });
 
-                // Inicializar SortableJS para Drag & Drop
                 new Sortable(cardsContainer, {
                     group: 'kanban',
                     animation: 200,
@@ -227,8 +186,6 @@
                     onEnd: function (evt) {
                         const cardId = evt.item.getAttribute('data-id');
                         const newColumnId = evt.to.getAttribute('data-column-id');
-                        
-                        // Actualizar estado en memoria
                         const card = boardData.cards.find(c => c.id === cardId);
                         if (card) {
                             card.column = newColumnId;
@@ -257,7 +214,6 @@
             renderHashtagFilters();
         }
 
-        // --- GESTIÓN DE MODAL DE ARTÍCULOS ---
         function nuevaTarjeta() {
             document.getElementById('card-id').value = '';
             document.getElementById('card-titulo').value = '';
@@ -298,7 +254,6 @@
             }
 
             if (id) {
-                // Editar existente
                 const card = boardData.cards.find(c => c.id === id);
                 if (card) {
                     card.titulo = titulo;
@@ -307,14 +262,13 @@
                     card.hashtags = hashtags;
                 }
             } else {
-                // Crear nueva
                 const nueva = {
                     id: 'art_' + Date.now(),
                     column: 'sin_asignar',
                     titulo,
                     autor,
                     revisor,
-                    hashtags: hashtags.length ? hashtags. souvent : ['#general']
+                    hashtags: hashtags.length ? hashtags : ['#general']
                 };
                 boardData.cards.push(nueva);
             }
@@ -334,79 +288,37 @@
             }
         }
 
-        // --- CONFIGURACIÓN Y GUARDADO EN GITHUB ---
-        function abrirModalConfig() {
-            const cfg = getConfig();
-            document.getElementById('cfg-repo').value = cfg.repo;
-            document.getElementById('cfg-path').value = cfg.path;
-            document.getElementById('cfg-token').value = cfg.token;
-            document.getElementById('modal-config').classList.remove('hidden');
-        }
-
-        function cerrarModalConfig() {
-            document.getElementById('modal-config').classList.add('hidden');
-        }
-
-        function guardarConfig() {
-            localStorage.setItem('kanban_repo', document.getElementById('cfg-repo').value);
-            localStorage.setItem('kanban_path', document.getElementById('cfg-path').value);
-            localStorage.setItem('kanban_token', document.getElementById('cfg-token').value);
-            cerrarModalConfig();
-            alert('¡Configuración guardada correctamente en tu navegador!');
-        }
-
         async function guardarEnServidorGitHub() {
-            const cfg = getConfig();
-            if (!cfg.token) {
-                alert('Falta configurar el Token de Acceso Personal (PAT) de GitHub. Haz clic en "Configurar GitHub".');
-                abrirModalConfig();
+            if (!GITHUB_PAT || GITHUB_PAT.includes("TU_TOKEN_AQUI")) {
+                alert('Falta configurar el GITHUB_PAT en el código de index.html.');
                 return;
             }
 
             const btn = document.getElementById('btnGuardar');
-            btn.innerText = 'Guardando en servidor...';
+            btn.innerText = 'Enviando al servidor...';
             btn.disabled = true;
 
             try {
-                const apiUrl = `https://api.github.com/repos/${cfg.repo}/contents/${cfg.path}`;
-
-                // 1. Obtener el SHA actual del archivo remoto
-                const getRes = await fetch(apiUrl, {
-                    headers: { 'Authorization': `token ${cfg.token}` }
-                });
-
-                if (!getRes.ok) {
-                    throw new Error('No se pudo conectar con el repositorio. Revisa el token y el nombre del repo.');
-                }
-
-                const fileData = await getRes.json();
-                const currentSha = fileData.sha;
-
-                // 2. Codificar el nuevo JSON en Base64 de forma segura
-                const jsonString = JSON.stringify(boardData, null, 2);
-                const contentEncoded = btoa(unescape(encodeURIComponent(jsonString)));
-
-                // 3. Enviar PUT para actualizar el archivo en GitHub (Commit automático)
-                const putRes = await fetch(apiUrl, {
-                    method: 'PUT',
+                // Disparar el evento de GitHub Actions (Dispatch)
+                const response = await fetch(`https://api.github.com/repos/${REPO_NAME}/dispatches`, {
+                    method: 'POST',
                     headers: {
-                        'Authorization': `token ${cfg.token}`,
+                        'Authorization': `Bearer ${GITHUB_PAT}`,
+                        'Accept': 'application/vnd.github+json',
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        message: 'Actualización del tablero editorial Kanban',
-                        content: contentEncoded,
-                        sha: currentSha
+                        event_type: 'actualizar-kanban',
+                        client_payload: { data: boardData }
                     })
                 });
 
-                if (putRes.ok) {
-                    alert('¡Cambios guardados con éxito en el servidor de GitHub! El commit se ha aplicado correctamente.');
+                if (response.ok) {
+                    alert('¡Cambios enviados! El servidor actualizará el repositorio en unos segundos.');
                 } else {
-                    const errJson = await putRes.json();
-                    throw new Error(errJson.message || 'Error desconocido en la API de GitHub.');
+                    const err = await response.json();
+                    throw new Error(err.message || 'Error al comunicarse con la API de GitHub.');
                 }
-
             } catch (error) {
                 alert('Error al guardar: ' + error.message);
             } finally {
@@ -415,7 +327,6 @@
             }
         }
 
-        // Cargar al iniciar la página
         window.onload = () => {
             cargarTableroDesdeServidor();
         };
