@@ -1,0 +1,19 @@
+{
+  "columns": [
+    { "id": "sin_asignar", "title": "Sin Asignar" },
+    { "id": "asignado", "title": "Asignado a Revisor" },
+    { "id": "revisado", "title": "Revisado" },
+    { "id": "devuelto", "title": "Devuelto a Autor" },
+    { "id": "finalizado", "title": "Finalizado" }
+  ],
+  "cards": [
+    {
+      "id": "art_1",
+      "column": "sin_asignar",
+      "titulo": "El misterio del asesinato del profesor de matemáticas",
+      "autor": "Agatha Christie",
+      "revisor": "",
+      "hashtags": ["#vol4n1", "#matematicas"]
+    }
+  ]
+}
