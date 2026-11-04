@@ -3,6 +3,7 @@
     {
       "autor": "Manuel Gómez Zotero",
       "column": "sin_asignar",
+      "comentarios": "6 páginas (Compila OK; falta añadir foto y poner bien ese apartado)",
       "hashtags": [
         "#vol4n1",
         "#teoria_numeros"
@@ -10,6 +11,42 @@
       "id": "art_1",
       "revisor": "",
       "titulo": "Zipf, cachés y función zeta"
+    },
+    {
+      "autor": "Agata Timón",
+      "column": "sin_asignar",
+      "comentarios": "",
+      "hashtags": [
+        "#vol4n1",
+        "#filosofia_matemática"
+      ],
+      "id": "art_1793828786983",
+      "revisor": "",
+      "titulo": "Matemáticas humanas"
+    },
+    {
+      "autor": "Ramon Redbull",
+      "column": "sin_asignar",
+      "comentarios": "",
+      "hashtags": [
+        "#vol4n1",
+        "#computacion_cuántica"
+      ],
+      "id": "art_1793828845438",
+      "revisor": "",
+      "titulo": "Conjetura AA"
+    },
+    {
+      "autor": "Fernando Chamizo",
+      "column": "sin_asignar",
+      "comentarios": "",
+      "hashtags": [
+        "#vol4n1",
+        "#polinomios_legendre"
+      ],
+      "id": "art_1793828890562",
+      "revisor": "",
+      "titulo": "Bessel Legendre"
     }
   ],
   "columns": [
