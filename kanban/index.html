@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Kanban Editorial - Lva2</title>
+    <!-- Tailwind CSS para diseño moderno -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- SortableJS para Drag & Drop fluido -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+    <style>
+        .bubble-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.2s ease;
+        }
+        .bubble-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+        }
+        .ghost-card {
+            background: #e2e8f0;
+            opacity: 0.4;
+            border: 2px dashed #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col">
+
+    <!-- BARRA SUPERIOR -->
+    <header class="bg-white border-b border-slate-200 px-6 py-4 flex flex-wrap items-center justify-between shadow-sm gap-4">
+        <div>
+            <h1 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                <span>📊</span> Tablero Editorial - Lva2
+            </h1>
+            <p class="text-xs text-slate-500">Gestión colaborativa de artículos (Servidor GitHub)</p>
+        </div>
+
+        <div class="flex items-center gap-3 flex-wrap">
+            <button onclick="abrirModalConfig()" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-2 rounded-lg font-medium transition flex items-center gap-1">
+                ⚙️ Configurar GitHub
+            </button>
+            <button onclick="nuevaTarjeta()" class="text-xs bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition flex items-center gap-1 shadow-sm">
+                ➕ Nuevo Artículo
+            </button>
+            <button onclick="guardarEnServidorGitHub()" id="btnGuardar" class="text-xs bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-medium transition flex items-center gap-1 shadow-sm">
+                💾 Guardar en Servidor
+            </button>
+        </div>
+    </header>
+
+    <!-- BARRA DE FILTROS / HASHTAGS -->
+    <div class="bg-white border-b border-slate-200 px-6 py-3 flex items-center gap-4 text-sm">
+        <span class="text-slate-500 font-medium text-xs">Filtrar por Hashtag:</span>
+        <div id="hashtag-filters" class="flex flex-wrap gap-2">
+            <button onclick="filtrarHashtag('TODOS')" class="px-2.5 py-1 bg-slate-800 text-white rounded-full text-xs font-medium">Todos</button>
+        </div>
+    </div>
+
+    <!-- CONTENEDOR DEL TABLERO KANBAN -->
+    <main class="flex-1 p-6 overflow-x-auto">
+        <div id="kanban-board" class="flex gap-6 items-start min-h-[75vh]">
+            <!-- Las columnas se generan dinámicamente aquí -->
+        </div>
+    </main>
+
+    <!-- MODAL DE CONFIGURACIÓN DE GITHUB -->
+    <div id="modal-config" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl">
+            <h3 class="text-lg font-bold mb-2">Configuración de Conexión GitHub</h3>
+            <p class="text-xs text-slate-500 mb-4">Introduce los datos de tu repositorio para permitir que la web guarde los cambios directamente haciendo commits automáticos.</p>
+            
+            <div class="space-y-3 text-sm">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Repositorio (ej: revistalva2/Lva2_laboratorio)</label>
+                    <input type="text" id="cfg-repo" class="w-full border rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-indigo-500 outline-none" placeholder="revistalva2/Lva2_laboratorio">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Ruta del JSON (ej: kanban/kanban-data.json)</label>
+                    <input type="text" id="cfg-path" class="w-full border rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-indigo-500 outline-none" value="kanban/kanban-data.json">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Personal Access Token (PAT con permisos de repo)</label>
+                    <input type="password" id="cfg-token" class="w-full border rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-indigo-500 outline-none" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+                </div>
+            </div>
+
+            <div class="mt-6 flex justify-end gap-2">
+                <button onclick="cerrarModalConfig()" class="px-4 py-2 text-xs bg-slate-100 hover:bg-slate-200 rounded-lg font-medium">Cancelar</button>
+                <button onclick="guardarConfig()" class="px-4 py-2 text-xs bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium">Guardar Configuración</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE EDICIÓN DE ARTÍCULO -->
+    <div id="modal-card" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-xl">
+            <h3 id="modal-card-title" class="text-lg font-bold mb-4">Editar Artículo</h3>
+            <input type="hidden" id="card-id">
+            
+            <div class="space-y-3 text-sm">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Título del Artículo</label>
+                    <input type="text" id="card-titulo" class="w-full border rounded-lg px-3 py-2 text-xs outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Autor</label>
+                        <input type="text" id="card-autor" class="w-full border rounded-lg px-3 py-2 text-xs outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Revisor Asignado</label>
+                        <input type="text" id="card-revisor" class="w-full border rounded-lg px-3 py-2 text-xs outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Ej: Pedro">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Hashtags (separados por espacio)</label>
+                    <input type="text" id="card-hashtags" class="w-full border rounded-lg px-3 py-2 text-xs outline-none focus:ring-2 focus:ring-indigo-500" placeholder="#vol4n1 #algebra">
+                </div>
+            </div>
+
+            <div class="mt-6 flex justify-between items-center">
+                <button onclick="eliminarTarjetaActual()" class="px-3 py-2 text-xs bg-rose-50 text-rose-600 hover:bg-rose-100 rounded-lg font-medium">Eliminar Artículo</button>
+                <div class="flex gap-2">
+                    <button onclick="cerrarModalCard()" class="px-4 py-2 text-xs bg-slate-100 hover:bg-slate-200 rounded-lg font-medium">Cancelar</button>
+                    <button onclick="guardarTarjetaActual()" class="px-4 py-2 text-xs bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT DE LÓGICA -->
+    <script>
+        // Estructura por defecto del tablero si no carga el JSON
+        let boardData = {
+            columns: [
+                { id: "sin_asignar", title: "Sin Asignar" },
+                { id: "asignado", title: "Asignado a Revisor" },
+                { id: "revisado", title: "Revisado" },
+                { id: "devuelto", title: "Devuelto a Autor" },
+                { id: "finalizado", title: "Finalizado" }
+            ],
+            cards: []
+        };
+
+        let currentFilter = 'TODOS';
+
+        // Cargar configuración de GitHub guardada en navegador (solo credenciales de acceso)
+        function getConfig() {
+            return {
+                repo: localStorage.getItem('kanban_repo') || 'revistalva2/Lva2_laboratorio',
+                path: localStorage.getItem('kanban_path') || 'kanban/kanban-data.json',
+                token: localStorage.getItem('kanban_token') || ''
+            };
+        }
+
+        async function cargarTableroDesdeServidor() {
+            try {
+                const response = await fetch('./kanban-data.json?t=' + new Date().getTime());
+                if (response.ok) {
+                    boardData = await response.json();
+                    renderKanban();
+                    renderHashtagFilters();
+                } else {
+                    console.warn("No se encontró kanban-data.json local, usando estructura vacía.");
+                    renderKanban();
+                }
+            } catch (error) {
+                console.error("Error al cargar el tablero del servidor:", error);
+                renderKanban();
+            }
+        }
+
+        function renderKanban() {
+            const container = document.getElementById('kanban-board');
+            container.innerHTML = '';
+
+            boardData.columns.forEach(col => {
+                const colDiv = document.createElement('div');
+                colDiv.className = 'bg-slate-200/70 rounded-2xl p-4 w-80 flex-shrink-0 flex flex-col max-h-[75vh]';
+                colDiv.innerHTML = `
+                    <div class="flex justify-between items-center mb-3 px-1">
+                        <h3 class="font-bold text-xs uppercase tracking-wider text-slate-600">${col.title}</h3>
+                        <span class="bg-slate-300 text-slate-700 text-xs px-2 py-0.5 rounded-full font-semibold" id="count-${col.id}">0</span>
+                    </div>
+                    <div class="flex-1 overflow-y-auto space-y-3 p-1 kanban-items" data-column-id="${col.id}" id="col-${col.id}">
+                        <!-- Tarjetas -->
+                    </div>
+                `;
+                container.appendChild(colDiv);
+
+                // Filtrar tarjetas de esta columna
+                const cardsContainer = colDiv.querySelector(`#col-${col.id}`);
+                const colCards = boardData.cards.filter(card => card.column === col.id);
+                
+                document.getElementById(`count-${col.id}`).innerText = colCards.length;
+
+                colCards.forEach(card => {
+                    if (currentFilter !== 'TODOS' && !card.hashtags.includes(currentFilter)) {
+                        return; // Ocultar si no coincide con el filtro
+                    }
+
+                    const cardEl = document.createElement('div');
+                    cardEl.className = 'bubble-card p-4 rounded-xl cursor-pointer border border-slate-100';
+                    cardEl.setAttribute('data-id', card.id);
+                    cardEl.onclick = () => abrirModalCard(card.id);
+
+                    let tagsHtml = card.hashtags.map(tag => `<span class="bg-indigo-50 text-indigo-600 text-[10px] px-2 py-0.5 rounded-md font-medium">${tag}</span>`).join(' ');
+
+                    cardEl.innerHTML = `
+                        <h4 class="font-semibold text-sm text-slate-800 mb-2 leading-snug">${card.titulo}</h4>
+                        <div class="text-xs text-slate-500 mb-3 space-y-1">
+                            <p>👤 <strong>Autor:</strong> ${card.autor || 'Sin definir'}</p>
+                            <p>🔍 <strong>Revisor:</strong> ${card.revisor || 'Sin asignar'}</p>
+                        </div>
+                        <div class="flex flex-wrap gap-1 mt-2">${tagsHtml}</div>
+                    `;
+                    cardsContainer.appendChild(cardEl);
+                });
+
+                // Inicializar SortableJS para Drag & Drop
+                new Sortable(cardsContainer, {
+                    group: 'kanban',
+                    animation: 200,
+                    ghostClass: 'ghost-card',
+                    onEnd: function (evt) {
+                        const cardId = evt.item.getAttribute('data-id');
+                        const newColumnId = evt.to.getAttribute('data-column-id');
+                        
+                        // Actualizar estado en memoria
+                        const card = boardData.cards.find(c => c.id === cardId);
+                        if (card) {
+                            card.column = newColumnId;
+                            renderKanban();
+                        }
+                    }
+                });
+            });
+        }
+
+        function renderHashtagFilters() {
+            const container = document.getElementById('hashtag-filters');
+            let allTags = new Set();
+            boardData.cards.forEach(c => c.hashtags.forEach(t => allTags.add(t)));
+
+            let html = `<button onclick="filtrarHashtag('TODOS')" class="px-2.5 py-1 ${currentFilter === 'TODOS' ? 'bg-slate-800 text-white' : 'bg-slate-100 text-slate-700'} rounded-full text-xs font-medium transition">Todos</button>`;
+            allTags.forEach(tag => {
+                html += `<button onclick="filtrarHashtag('${tag}')" class="px-2.5 py-1 ${currentFilter === tag ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-700'} rounded-full text-xs font-medium transition">${tag}</button>`;
+            });
+            container.innerHTML = html;
+        }
+
+        function filtrarHashtag(tag) {
+            currentFilter = tag;
+            renderKanban();
+            renderHashtagFilters();
+        }
+
+        // --- GESTIÓN DE MODAL DE ARTÍCULOS ---
+        function nuevaTarjeta() {
+            document.getElementById('card-id').value = '';
+            document.getElementById('card-titulo').value = '';
+            document.getElementById('card-autor').value = '';
+            document.getElementById('card-revisor').value = '';
+            document.getElementById('card-hashtags').value = '#';
+            document.getElementById('modal-card-title').innerText = 'Nuevo Artículo';
+            document.getElementById('modal-card').classList.remove('hidden');
+        }
+
+        function abrirModalCard(id) {
+            const card = boardData.cards.find(c => c.id === id);
+            if (!card) return;
+            document.getElementById('card-id').value = card.id;
+            document.getElementById('card-titulo').value = card.titulo;
+            document.getElementById('card-autor').value = card.autor;
+            document.getElementById('card-revisor').value = card.revisor;
+            document.getElementById('card-hashtags').value = card.hashtags.join(' ');
+            document.getElementById('modal-card-title').innerText = 'Editar Artículo';
+            document.getElementById('modal-card').classList.remove('hidden');
+        }
+
+        function cerrarModalCard() {
+            document.getElementById('modal-card').classList.add('hidden');
+        }
+
+        function guardarTarjetaActual() {
+            const id = document.getElementById('card-id').value;
+            const titulo = document.getElementById('card-titulo').value;
+            const autor = document.getElementById('card-autor').value;
+            const revisor = document.getElementById('card-revisor').value;
+            const hashtagsRaw = document.getElementById('card-hashtags').value;
+            const hashtags = hashtagsRaw.split(' ').filter(tag => tag.trim().startsWith('#'));
+
+            if (!titulo.trim()) {
+                alert('El título es obligatorio.');
+                return;
+            }
+
+            if (id) {
+                // Editar existente
+                const card = boardData.cards.find(c => c.id === id);
+                if (card) {
+                    card.titulo = titulo;
+                    card.autor = autor;
+                    card.revisor = revisor;
+                    card.hashtags = hashtags;
+                }
+            } else {
+                // Crear nueva
+                const nueva = {
+                    id: 'art_' + Date.now(),
+                    column: 'sin_asignar',
+                    titulo,
+                    autor,
+                    revisor,
+                    hashtags: hashtags.length ? hashtags. souvent : ['#general']
+                };
+                boardData.cards.push(nueva);
+            }
+
+            cerrarModalCard();
+            renderKanban();
+            renderHashtagFilters();
+        }
+
+        function eliminarTarjetaActual() {
+            const id = document.getElementById('card-id').value;
+            if (id && confirm('¿Seguro que deseas eliminar este artículo?')) {
+                boardData.cards = boardData.cards.filter(c => c.id !== id);
+                cerrarModalCard();
+                renderKanban();
+                renderHashtagFilters();
+            }
+        }
+
+        // --- CONFIGURACIÓN Y GUARDADO EN GITHUB ---
+        function abrirModalConfig() {
+            const cfg = getConfig();
+            document.getElementById('cfg-repo').value = cfg.repo;
+            document.getElementById('cfg-path').value = cfg.path;
+            document.getElementById('cfg-token').value = cfg.token;
+            document.getElementById('modal-config').classList.remove('hidden');
+        }
+
+        function cerrarModalConfig() {
+            document.getElementById('modal-config').classList.add('hidden');
+        }
+
+        function guardarConfig() {
+            localStorage.setItem('kanban_repo', document.getElementById('cfg-repo').value);
+            localStorage.setItem('kanban_path', document.getElementById('cfg-path').value);
+            localStorage.setItem('kanban_token', document.getElementById('cfg-token').value);
+            cerrarModalConfig();
+            alert('¡Configuración guardada correctamente en tu navegador!');
+        }
+
+        async function guardarEnServidorGitHub() {
+            const cfg = getConfig();
+            if (!cfg.token) {
+                alert('Falta configurar el Token de Acceso Personal (PAT) de GitHub. Haz clic en "Configurar GitHub".');
+                abrirModalConfig();
+                return;
+            }
+
+            const btn = document.getElementById('btnGuardar');
+            btn.innerText = 'Guardando en servidor...';
+            btn.disabled = true;
+
+            try {
+                const apiUrl = `https://api.github.com/repos/${cfg.repo}/contents/${cfg.path}`;
+
+                // 1. Obtener el SHA actual del archivo remoto
+                const getRes = await fetch(apiUrl, {
+                    headers: { 'Authorization': `token ${cfg.token}` }
+                });
+
+                if (!getRes.ok) {
+                    throw new Error('No se pudo conectar con el repositorio. Revisa el token y el nombre del repo.');
+                }
+
+                const fileData = await getRes.json();
+                const currentSha = fileData.sha;
+
+                // 2. Codificar el nuevo JSON en Base64 de forma segura
+                const jsonString = JSON.stringify(boardData, null, 2);
+                const contentEncoded = btoa(unescape(encodeURIComponent(jsonString)));
+
+                // 3. Enviar PUT para actualizar el archivo en GitHub (Commit automático)
+                const putRes = await fetch(apiUrl, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `token ${cfg.token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: 'Actualización del tablero editorial Kanban',
+                        content: contentEncoded,
+                        sha: currentSha
+                    })
+                });
+
+                if (putRes.ok) {
+                    alert('¡Cambios guardados con éxito en el servidor de GitHub! El commit se ha aplicado correctamente.');
+                } else {
+                    const errJson = await putRes.json();
+                    throw new Error(errJson.message || 'Error desconocido en la API de GitHub.');
+                }
+
+            } catch (error) {
+                alert('Error al guardar: ' + error.message);
+            } finally {
+                btn.innerText = '💾 Guardar en Servidor';
+                btn.disabled = false;
+            }
+        }
+
+        // Cargar al iniciar la página
+        window.onload = () => {
+            cargarTableroDesdeServidor();
+        };
+    </script>
+</body>
+</html>
