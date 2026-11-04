@@ -61,14 +61,18 @@
       "titulo": "Cacharreando con Medias"
     }
   ],
-  "columns": [
+"columns": [
     {
       "id": "sin_asignar",
       "title": "Sin Asignar"
     },
     {
+      "id": "rechazado",
+      "title": "Rechazado"
+    },
+    {
       "id": "asignado",
-      "title": "Asignado a Revisor"
+      "title": "En revisión"
     },
     {
       "id": "revisado",
@@ -76,11 +80,10 @@
     },
     {
       "id": "devuelto",
-      "title": "Devuelto a Autor"
+      "title": "Galeras a autor"
     },
     {
       "id": "finalizado",
-      "title": "Finalizado"
+      "title": "Aceptado (fin de proceso)"
     }
   ]
-}
