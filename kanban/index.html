@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -102,10 +104,10 @@
     <!-- SCRIPT DE LÓGICA -->
     <script>
         // =========================================================
-        // CONFIGURACIÓN DIRECTA DEL SERVIDOR
+        // CONFIGURACIÓN INYECTADA DESDE _data/kanban_config.yml
         // =========================================================
-        const REPO_NAME = "revistalva2/Lva2_laboratorio";
-        const GITHUB_PAT = "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"; // Pega aquí tu Personal Access Token (con permisos repo y workflow)
+        const REPO_NAME = "{{ site.data.kanban_config.repo_name }}";
+        const GITHUB_PAT = "{{ site.data.kanban_config.github_pat }}";
         // =========================================================
 
         let boardData = {
@@ -290,16 +292,15 @@
 
         async function guardarEnServidorGitHub() {
             if (!GITHUB_PAT || GITHUB_PAT.includes("TU_TOKEN_AQUI")) {
-                alert('Falta configurar el GITHUB_PAT en el código de index.html.');
+                alert('Falta configurar el GITHUB_PAT en el archivo de configuración.');
                 return;
             }
 
-            const btn = document.getElementById('btnGuardar');
+            const btn = document.getElementById('btnGuardار');
             btn.innerText = 'Enviando al servidor...';
             btn.disabled = true;
 
             try {
-                // Disparar el evento de GitHub Actions (Dispatch)
                 const response = await fetch(`https://api.github.com/repos/${REPO_NAME}/dispatches`, {
                     method: 'POST',
                     headers: {
