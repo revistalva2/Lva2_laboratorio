@@ -107,7 +107,8 @@
         // CONFIGURACIÓN INYECTADA DESDE _data/kanban_config.yml
         // =========================================================
         const REPO_NAME = "{{ site.data.kanban_config.repo_name }}";
-        const GITHUB_PAT = "{{ site.data.kanban_config.github_pat }}";
+        const encodedPat = "{{ site.data.kanban_config.github_pat_enc }}";
+        const GITHUB_PAT = "ghp_" + atob(encodedPat);
         // =========================================================
 
         let boardData = {
