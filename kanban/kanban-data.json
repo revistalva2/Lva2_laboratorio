@@ -15,7 +15,7 @@
     {
       "autor": "Agata Timón",
       "column": "sin_asignar",
-      "comentarios": "",
+      "comentarios": "(ya lo tenemos - ¿palabras clave? ¿más referencias bibliográficas?) --> 8 páginas (ArtIA_Lva2)",
       "hashtags": [
         "#vol4n1",
         "#filosofia_matemática"
@@ -47,6 +47,18 @@
       "id": "art_1793828890562",
       "revisor": "",
       "titulo": "Bessel Legendre"
+    },
+    {
+      "autor": "Oscar Ciaurri",
+      "column": "sin_asignar",
+      "comentarios": "no usa plantilla",
+      "hashtags": [
+        "#vol4n1",
+        "#conicas"
+      ],
+      "id": "art_1793829067858",
+      "revisor": "",
+      "titulo": "Cacharreando con Medias"
     }
   ],
   "columns": [
