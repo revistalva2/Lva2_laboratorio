@@ -2,26 +2,26 @@
   "cards": [
     {
       "autor": "Manuel Gómez Zotano",
-      "column": "sin_asignar",
+      "column": "asignado",
       "comentarios": "6 páginas (Compila OK; falta añadir foto y poner bien ese apartado)",
       "hashtags": [
         "#vol4n1",
         "#teoria_numeros"
       ],
       "id": "art_1",
-      "revisor": "",
+      "revisor": "Enrique, ......",
       "titulo": "Zipf, cachés y función zeta"
     },
     {
       "autor": "Agata Timón",
-      "column": "sin_asignar",
+      "column": "asignado",
       "comentarios": "(ya lo tenemos - ¿palabras clave? ¿más referencias bibliográficas?) --> 8 páginas (ArtIA_Lva2)",
       "hashtags": [
         "#vol4n1",
         "#filosofia_matemática"
       ],
       "id": "art_1793828786983",
-      "revisor": "",
+      "revisor": "Enrique, ...",
       "titulo": "Matemáticas humanas"
     },
     {
