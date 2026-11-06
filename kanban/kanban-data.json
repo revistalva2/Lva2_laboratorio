@@ -2,26 +2,26 @@
   "cards": [
     {
       "autor": "Manuel Gómez Zotano",
-      "column": "asignado",
-      "comentarios": "6 páginas (Compila OK; falta añadir foto y poner bien ese apartado)\nHubo comentarios indicando que encajaba en la revista. Falta que haya al menos otra persona que lo revise. Aparte, ya lo verá el boos cuamdo haga la preparación final para la revista.",
+      "column": "revisado",
+      "comentarios": "6 páginas (Compila OK; falta añadir foto y poner bien ese apartado)\nHubo comentarios indicando que encajaba en la revista. Falta que haya al menos otra persona que lo revise. Aparte, ya lo verá el boos cuamdo haga la preparación final para la revista.  --> José Manuel confirma paso a revisado",
       "hashtags": [
         "#vol4n1",
         "#teoria_numeros"
       ],
       "id": "art_1",
-      "revisor": "Enrique, ......",
+      "revisor": "Enrique, José Manuel",
       "titulo": "Zipf, cachés y función zeta"
     },
     {
       "autor": "Agata Timón",
-      "column": "asignado",
-      "comentarios": "(ya lo tenemos - ¿palabras clave? ¿más referencias bibliográficas?) --> 8 páginas (ArtIA_Lva2)",
+      "column": "revisado",
+      "comentarios": "(ya lo tenemos - ¿palabras clave? ¿más referencias bibliográficas?) --> 8 páginas (ArtIA_Lva2)  --> José Manuel confirma paso a revisado",
       "hashtags": [
         "#vol4n1",
         "#filosofia_matemática"
       ],
       "id": "art_1793828786983",
-      "revisor": "Enrique, ...",
+      "revisor": "Enrique, José Manuel",
       "titulo": "Matemáticas humanas"
     },
     {
@@ -151,6 +151,17 @@
       "id": "art_1793912323880",
       "revisor": "",
       "titulo": "PROBLEMAS"
+    },
+    {
+      "autor": "Nicolás Piña",
+      "column": "sin_asignar",
+      "comentarios": "9 páginas https://t.me/c/1576395526/44343",
+      "hashtags": [
+        "#vol4n1"
+      ],
+      "id": "art_1793974394316",
+      "revisor": "",
+      "titulo": "Metalicidad Ford"
     }
   ],
   "columns": [
