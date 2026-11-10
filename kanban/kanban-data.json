@@ -155,7 +155,7 @@
     {
       "autor": "Nicolás Piña",
       "column": "asignado",
-      "comentarios": "9 páginas https://t.me/c/1576395526/44343",
+      "comentarios": "9 páginas https://t.me/c/1576395526/44343\n1. En el abstract, tanto en español como en ingles, σ_k debe ser (σ_k)⁻¹ .                                                                                                                                                                                                                                                                                                                                             2. La expresión «leída en coordenadas cartesianas», que se utiliza varias veces, la primera en el último párrafo de la introducción, debería explicarse un poco mejor.\n3. En la antepenúltima línea de la página 2 sobra una   «m» a continuación de la fórmula.                                                                                                                                                                                                                                                                                        4. La notación φ = [1;1,1,...] no se si queda claro para cualquier lector que es un desarrollo en fracción continua. Debería especificarse, se hace poco más adelante  después de usarlas por primera vez.                                                                                                                                                                                                                       5.  Eliminado.                                                                                                                                                                                                                                                                                             6. A mitad de la primera columna de la página 5, la fórmula se sale de márgenes.                                                                                                                                                                                                                                                                                                                                     7. En la página 4, perdón por el salto de orden, justo antes del apartado del «Círculo metálico», habla de «vecinos de Farey», sin haber dicho nada previamente de la relación de las fracciones de Farey con los círculos de Ford.\n\nSalvadas estas cosas, me parece interesante para su publicación. Lo que no he hecho es rastrear la bibliografía, e insisto en que lo mire alguien más, especialmente el apartado hiperbólico.",
       "hashtags": [
         "#vol4n1",
         "#metalicidad",
@@ -163,7 +163,7 @@
         "#geometria"
       ],
       "id": "art_1793974394316",
-      "revisor": "Ignacio",
+      "revisor": "Ignacio, ...",
       "titulo": "Metalicidad Ford"
     }
   ],
